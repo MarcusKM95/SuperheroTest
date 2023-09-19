@@ -9,6 +9,7 @@ public class Database {
     public Database() {
         this.superheroList = new ArrayList<Superhero>();
     }
+    //Test at den adder endnu en superhelt til listen (superherolist+1)
     @Test
     public void addSuperHero(Superhero hero) {
         this.superheroList.add(hero);
@@ -22,7 +23,7 @@ public class Database {
 
         }
     }
-
+    //Test, at søgemetoden kan finde 0, 1 og flere resultater
     public void søg(String søgning) {
         for (Superhero hero : this.superheroList) {
             if (hero.getName().contains(søgning) || hero.getSuperHeroName().contains(søgning)) {
