@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 
 public class Database {
@@ -7,7 +9,7 @@ public class Database {
     public Database() {
         this.superheroList = new ArrayList<Superhero>();
     }
-
+    @Test
     public void addSuperHero(Superhero hero) {
         this.superheroList.add(hero);
     }
