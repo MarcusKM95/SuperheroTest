@@ -1,18 +1,25 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.xml.crypto.Data;
 import java.util.ArrayList;
 
 public class Database {
 
     ArrayList<Superhero> superheroList;
 
+
     public Database() {
+
         this.superheroList = new ArrayList<Superhero>();
     }
     //Test at den adder endnu en superhelt til listen (superherolist+1)
-    @Test
-    public void addSuperHero(Superhero hero) {
-        this.superheroList.add(hero);
+
+        @Test
+        public void addSuperHero (Superhero hero){
+            this.superheroList.add(hero);
+
+
     }
 
     public void showHeroList() {
@@ -24,7 +31,9 @@ public class Database {
         }
     }
     //Test, at søgemetoden kan finde 0, 1 og flere resultater
-    public void søg(String søgning) {
+
+        @Test
+        public void søg(String søgning) {
         for (Superhero hero : this.superheroList) {
             if (hero.getName().contains(søgning) || hero.getSuperHeroName().contains(søgning)) {
                 System.out.println(hero.toString());
